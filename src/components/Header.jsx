@@ -1,6 +1,6 @@
 import React from 'react';
-const HelloWorld = () => (
+const Header = () => (
     <h1>Hello World</h1>
 );
 
-export default HelloWorld;
+export default Header;
