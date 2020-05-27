@@ -1,0 +1,13 @@
+// Buttons
+@mixin btn() {
+    @include text(center);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    color: white;
+    &:hover {
+        border: 1px solid $ColorContrast;
+        color: black;
+        background-color: $ColorContrast;
+    }
+}

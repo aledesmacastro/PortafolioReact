@@ -1,5 +1,12 @@
+@import './core/definitions';
+@import './core/fonts';
+@import './core/media';
+@import './core/base';
+@import './core/mixin';
+
 body {
+    font-family: $SecondFont;
     margin: 0;
-    background-color:green;
+    background-color: $ColorPrincipal;
     color: white;
 }

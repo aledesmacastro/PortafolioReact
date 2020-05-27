@@ -1,0 +1,28 @@
+@import '../core/definitions';
+@import '../core/fonts';
+@import '../core/media';
+@import '../core/base';
+@import '../core/mixin';
+
+.header {
+    // padding-top: 15px;
+    background-color: $ColorPrincipal;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    .nav__container-list {
+        width: 180px;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+        .nav__item {
+            &:hover {
+                color: $ColorContrast;
+            }
+        }
+    }
+}

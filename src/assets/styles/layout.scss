@@ -1,0 +1,15 @@
+@import './core/definitions';
+@import './core/fonts';
+@import './core/media';
+@import './core/base';
+@import './core/mixin';
+
+.container {
+    width: 320px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 15px 25px;
+    box-sizing: border-box;
+}

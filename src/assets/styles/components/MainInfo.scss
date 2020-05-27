@@ -1,0 +1,93 @@
+@import '../core/definitions';
+@import '../core/fonts';
+@import '../core/media';
+@import '../core/base';
+@import '../core/mixin';
+
+.mainInfo {
+    display: flex;
+    flex-direction: column-reverse;
+    .blockInfo {
+        display: block;
+        &__occupation {
+            font-size: szrem(14);
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            color: darken($color: $ColorContrast, $amount: 10);
+            &::before {
+                content: '------- ';
+            }
+            &::after {
+                content: ' -------';
+            }
+        }
+        &__Names {
+            font-size: szrem(34);
+            font-family: $FirstFont;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            .lastName {
+                color: $ColorContrast;
+            }
+        }
+        &__description {
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            line-height: szrem(18);
+        }
+        &__buttons {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content:space-evenly;
+            min-height: 40px;
+            .btn a {
+                @include btn();
+            }
+        }
+        &__socials {
+            margin-top: 30px;
+            display: block;
+            .list-icons {
+                display: flex;
+                align-items: center;
+                justify-content:space-evenly;
+                flex-direction: row;
+                &__link {
+                    @include ht2();
+                    @include aa(40px, 40px);
+                    fill: white;
+                    border: 1px dashed $ColorContrast;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    svg {
+                        display: block;
+                        @include aa(20px);
+                    }
+                    &:hover {
+                        background-color: $ColorContrast;
+                        fill: $ColorPrincipal;
+                    }
+                }
+            }
+        }
+    }
+    .blockImage {
+        text-align: center;
+        overflow: hidden;
+        &__container {
+            margin: 0 auto;
+            @include aa(150px, 150px);
+            border-radius: 80%;
+            overflow: hidden;
+            img {
+                @include aa(150px);
+            }
+        }
+    }
+}

@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 
 module.exports = {
     entry: './src/index.js',
@@ -39,16 +40,25 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|gif|jpg|svg)$/,
+                test: /\.(png|gif|jpg)$/,
                 use: [
                     {
                         'loader': 'file-loader',
                         options: {
-                            name: 'assets/[hash].[ext]',
+                            name: 'assets/Static/[hash].[ext]',
                         }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.svg$/,
+                loader: "svg-sprite-loader",
+                options: {
+                    runtimeCompat: true,
+                    extract: true,
+                    spriteFilename: "assets/Static/[hash].svg"
+                }
+              }
         ]
     },
     plugins: [
@@ -59,5 +69,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'assets/[name].css'
         }),
+        new SpriteLoaderPlugin(),
     ]
 }
