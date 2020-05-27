@@ -5,15 +5,11 @@
 //-----------------------------------
 
 //Text
-@mixin text(
-    $align: left,
-    $trans: none,
-    $decor: none
-) {
+@mixin text($align: left, $trans: none, $decor: none) {
     text: {
-        align      : $align;
-        decoration : $decor;
-        transform  : $trans;
+        align: $align;
+        decoration: $decor;
+        transform: $trans;
     }
 }
 
@@ -25,16 +21,16 @@
     $color: transparent,
     $size: auto
 ) {
-    @if is-url($way) { 
-        background-image: $way; 
-    } @else { 
-        background-image: image-url($way); 
-    };
+    @if is-url($way) {
+        background-image: $way;
+    } @else {
+        background-image: image-url($way);
+    }
     background: {
-        repeat   : $repeat;
-        position : $position;
-        color    : $color;
-        size     : $size;
+        repeat: $repeat;
+        position: $position;
+        color: $color;
+        size: $size;
     }
 }
 
@@ -46,22 +42,19 @@
     $posit_1: top,
     $posit_2: left
 ) {
-    position : $position;
-    #{$posit_1} : $value_1;
-    #{$posit_2} : $value_2;
+    position: $position;
+    #{$posit_1}: $value_1;
+    #{$posit_2}: $value_2;
 }
 
 //Width Height
-@mixin aa(
-    $width: auto,
-    $height: auto
-) {
-    width  : $width;
-    height : $height;
+@mixin aa($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
 }
 
 //Font
-@mixin font (
+@mixin font(
     $size: 1em,
     $family: $font1,
     $weight: normal,
@@ -70,13 +63,15 @@
     $variant: normal
 ) {
     font: {
-        size   : $size;
-        family : $family;
-        weight : $weight;
-        style  : $style;
-        variant: $variant
+        size: $size;
+        family: $family;
+        weight: $weight;
+        style: $style;
+        variant: $variant;
     }
-    @if $line-height != "none" { line-height: $line-height; }
+    @if $line-height != "none" {
+        line-height: $line-height;
+    }
 }
 
 //Columns constructor
@@ -88,17 +83,22 @@
     $width: 100%,
     $border: 0
 ) {
-    width: ((($width) - (($num_columns - 1) * $margin)) / $num_columns) - (2 * $padding) - $border;
+    width: ((($width) - (($num_columns - 1) * $margin)) / $num_columns) -
+        (2 * $padding) - $border;
     margin-right: $margin;
     padding: {
         left: $padding;
         right: $padding;
     }
 
-    @if $is_flex != true { display: block; float: left;}
+    @if $is_flex != true {
+        display: block;
+        float: left;
+    }
 
-
-    &:nth-of-type(#{$num_columns}n) { margin-right: 0; }
+    &:nth-of-type(#{$num_columns}n) {
+        margin-right: 0;
+    }
 }
 
 //Builder linear gradients
@@ -154,17 +154,17 @@
 @mixin no-margins {
     margin: 0;
     margin: {
-        top    : 0;
-        bottom : 0;
-        left   : 0;
-        right  : 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
     padding: 0;
     padding: {
-        top    : 0;
-        bottom : 0;
-        left   : 0;
-        right  : 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
 }
 
@@ -172,10 +172,10 @@
 @mixin no-border {
     border: 0 none transparent;
     border: {
-        top    : 0 none transparent;
-        bottom : 0 none transparent;
-        left   : 0 none transparent;
-        right  : 0 none transparent;
+        top: 0 none transparent;
+        bottom: 0 none transparent;
+        left: 0 none transparent;
+        right: 0 none transparent;
     }
 }
 
@@ -193,12 +193,23 @@
 }
 
 //Clearfix
-@mixin cf  { @include clearfix(); }
-@mixin cfp { @include pie-clearfix(); }
-@mixin cfl { @include legacy-pie-clearfix(); }
+@mixin cf {
+    @include clearfix();
+}
+@mixin cfp {
+    @include pie-clearfix();
+}
+@mixin cfl {
+    @include legacy-pie-clearfix();
+}
 
 // stretch
-@mixin stretch($offset-top: 0, $offset-right: 0, $offset-bottom: 0, $offset-left: 0) {
+@mixin stretch(
+    $offset-top: 0,
+    $offset-right: 0,
+    $offset-bottom: 0,
+    $offset-left: 0
+) {
     position: absolute;
     @if $offset-top {
         top: $offset-top;
@@ -222,13 +233,13 @@
     @include stretch-x;
     margin: {
         right: auto;
-        left : auto;
+        left: auto;
     }
 }
 
 //Rem
 @function szrem($value_px, $base: 16) {
-    @return ($value_px  / $base) + rem;
+    @return ($value_px / $base) + rem;
 }
 
 //-----------------------------------

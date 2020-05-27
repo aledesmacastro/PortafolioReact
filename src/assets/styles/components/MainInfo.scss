@@ -1,5 +1,4 @@
 @import '../core/definitions';
-@import '../core/fonts';
 @import '../core/media';
 @import '../core/base';
 @import '../core/mixin';
@@ -10,10 +9,12 @@
     .blockInfo {
         display: block;
         &__occupation {
-            font-size: szrem(14);
+            letter-spacing: .1rem;
+            // font-size: szrem(14);
             margin-top: 20px;
             display: block;
             text-align: center;
+            font-weight: bold;
             color: darken($color: $ColorContrast, $amount: 10);
             &::before {
                 content: '------- ';
@@ -23,7 +24,7 @@
             }
         }
         &__Names {
-            font-size: szrem(34);
+            // font-size: szrem(40);
             font-family: $FirstFont;
             margin-top: 20px;
             display: block;
@@ -33,10 +34,11 @@
             }
         }
         &__description {
+            box-sizing: border-box;
+            padding: 0 5px;
             margin-top: 20px;
             display: block;
             text-align: center;
-            line-height: szrem(18);
         }
         &__buttons {
             margin-top: 30px;
