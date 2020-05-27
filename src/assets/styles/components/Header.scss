@@ -13,14 +13,19 @@
 }
 
 .nav {
-    .nav__container-list {
+    &__container-list {
         width: 180px;
         display: flex;
         flex-flow: row;
         justify-content: space-evenly;
-        .nav__item {
-            &:hover {
-                color: $ColorContrast;
+        &__item {
+            .link {
+                color: white;
+                @include text();
+
+                &:hover {
+                    color: $ColorContrast;
+                }
             }
         }
     }
