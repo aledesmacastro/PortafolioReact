@@ -23,7 +23,7 @@ const App = () => (
             />
         </div>
         <div className='container odd'>
-            <GetInTouch phone='1234567890' email='aaaa@eee.com' />
+            <GetInTouch phone='3164976830' email='aaaa@eee.com' />
         </div>
     </div>
 );

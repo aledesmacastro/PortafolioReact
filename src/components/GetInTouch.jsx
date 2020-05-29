@@ -3,6 +3,7 @@ import Icon from './Icon';
 import '../assets/styles/components/GetInTouch.scss';
 import iconPhone from '../assets/statics/incoming-call.svg';
 import iconMail from '../assets/statics/email.svg';
+import iconWhatsapp from '../assets/statics/whatsapp.svg';
 
 
 class GetInTouch extends Component {
@@ -23,8 +24,15 @@ class GetInTouch extends Component {
                 <div className="getInTouch__container">
                     <i><Icon svgIcon={iconMail} /></i>
                     <div className="getInTouch__contact">
-                        <p>Send me Mail</p>
+                        <p>Send me mail</p>
                         <a href={`mailto:${email}`}>{email}</a>
+                    </div>
+                </div>
+                <div className="getInTouch__container">
+                    <i><Icon svgIcon={iconWhatsapp} /></i>
+                    <div className="getInTouch__contact">
+                        <p>Send a Message</p>
+                        <a href={`https://api.whatsapp.com/send?phone=57${phone}&text="Hi!"`} target="_blank">Hi</a>
                     </div>
                 </div>
             </div>
