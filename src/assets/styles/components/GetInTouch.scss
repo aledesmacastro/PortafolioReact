@@ -12,6 +12,8 @@
         font-size: szrem(24);
         @include text(center);
         margin-bottom: 10px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
     }
     &__container {
         display: flex;
