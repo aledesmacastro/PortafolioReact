@@ -29,6 +29,9 @@
             text-align: center;
             .lastName {
                 color: $ColorContrast;
+                &::before {
+                    content: " ";
+                }
             }
         }
         &__description {

@@ -1,0 +1,45 @@
+@import "../core/definitions";
+@import "../core/media";
+@import "../core/base";
+@import "../core/mixin";
+
+.getInTouch {
+    margin: 0 auto;
+    width: auto;
+    max-width: 164px;
+
+    &__title {
+        font-size: szrem(24);
+        @include text(center);
+        margin-bottom: 10px;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        i {
+            border: 1px dashed darken($color: $ColorContrast, $amount: 25);
+            fill: darken($color: $ColorContrast, $amount: 25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            @include aa(30px, 30px);
+            margin: 10px;
+            svg {
+                display: block;
+                @include aa(20px);
+            }
+        }
+        p {
+            font-size: szrem(12);
+            font-family: $FirstFont;
+            color: darken($color: #ffffff, $amount: 40);
+        }
+        a {
+            @include text();
+            color: white;
+            letter-spacing: .5px;
+        }
+    }
+}
