@@ -15,6 +15,8 @@ import iconInnovation from "../assets/statics/innovation.svg";
 import iconPhone from '../assets/statics/incoming-call.svg';
 import iconMail from '../assets/statics/email.svg';
 import iconWhatsapp from '../assets/statics/whatsapp.svg';
+import iconChip from '../assets/statics/chip.svg';
+import iconRobot from '../assets/statics/robot.svg';
 
 const App = () => (
     <div className='App'>
@@ -32,20 +34,25 @@ const App = () => (
         </div>
         <div className='container odd'>
             <h3 className='title-section'>Services</h3>
-            <p className='subtitle-section'>What we do?</p>
+            <p className='subtitle-section'>What I do?</p>
             <Service
                 iconService={iconIdea}
-                title='Frontend'
+                title='Front end'
                 description='orem lorem lorem'
             />
             <Service
                 iconService={iconInnovation}
-                title='React'
+                title='Web development'
                 description='orem lorem lorem'
             />
             <Service
                 iconService={iconCreativity}
-                title='Webpack'
+                title='Consulting'
+                description='orem lorem lorem'
+            />
+            <Service
+                iconService={iconChip}
+                title='RPA'
                 description='orem lorem lorem'
             />
         </div>
@@ -66,8 +73,8 @@ const App = () => (
             <GetInTouch
                 iconContact={iconWhatsapp}
                 message='Send a message'
-                link='https://api.whatsapp.com/send?phone=57${phone}&text=Hello!!`} target="_blank">Hello!!'
-                data='Hello'
+                link='https://api.whatsapp.com/send?phone=573164976830&text=Hello!!'
+                data='Hello world!'
             />
         </div>
         <div className='container'>
