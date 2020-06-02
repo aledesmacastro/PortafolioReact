@@ -16,6 +16,11 @@ h1 {
     font-size: 34px;
 }
 
-div[class~='odd'] {
-    background-color: darken($color: $ColorPrincipal, $amount: 2);
+.title-services {
+    color: $ColorContrast;
+    text-align: center;
+}
+.subtitle-services {
+    text-align: center;
+    font-size: szrem(36);
 }

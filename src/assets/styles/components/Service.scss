@@ -1,0 +1,29 @@
+@import '../core/definitions';
+@import '../core/media';
+@import '../core/base';
+@import '../core/mixin';
+
+.service {
+    background-color: lighten($color: $ColorPrincipal, $amount: 5);
+    margin: 15px auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    @include aa(150px);
+    &__icon {
+        fill: $ColorContrast;
+        svg {
+            @include aa(50px);
+        }
+    }
+    &__title {
+        margin-top: 10px;
+        font-size: szrem(18);
+    }
+    &__description {
+        margin-top: 10px;
+        font-size: szrem(11);
+    }
+}

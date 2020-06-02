@@ -9,7 +9,7 @@ import iconWhatsapp from '../assets/statics/whatsapp.svg';
 class GetInTouch extends Component {
 
     render() {
-        const {phone, email} = this.props;
+        const {phone, email, greet} = this.props;
         
         return (
             <div className="getInTouch">
@@ -18,7 +18,7 @@ class GetInTouch extends Component {
                     <i><Icon svgIcon={iconPhone} /></i>
                     <div className="getInTouch__contact">
                         <p>Call me now</p>
-                        <a href={`tel:${phone}`}>{phone}</a>
+                        <a href={`tel:+57${phone}`}>{phone}</a>
                     </div>
                 </div>
                 <div className="getInTouch__container">
@@ -31,8 +31,8 @@ class GetInTouch extends Component {
                 <div className="getInTouch__container">
                     <i><Icon svgIcon={iconWhatsapp} /></i>
                     <div className="getInTouch__contact">
-                        <p>Send a Message</p>
-                        <a href={`https://api.whatsapp.com/send?phone=57${phone}&text="Hi!"`} target="_blank">Hi</a>
+                        <p>Send a message</p>
+                        <a href={`https://api.whatsapp.com/send?phone=57${phone}&text=${greet}`} target="_blank">{greet}</a>
                     </div>
                 </div>
             </div>

@@ -12,3 +12,6 @@
     padding: 15px 25px;
     box-sizing: border-box;
 }
+div[class~='odd'] {
+    background-color: darken($color: $ColorPrincipal, $amount: 2);
+}

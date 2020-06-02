@@ -7,6 +7,11 @@ import "../assets/styles/App.scss";
 import Header from "../components/Header";
 import MainInfo from "../components/MainInfo";
 import GetInTouch from "../components/GetInTouch";
+import Service from "../components/Service";
+// IMPORT IMAGES
+import iconIdea from "../assets/statics/idea.svg";
+import iconCreativity from "../assets/statics/creativity.svg";
+import iconInnovation from "../assets/statics/innovation.svg";
 
 const App = () => (
     <div className='App'>
@@ -20,10 +25,17 @@ const App = () => (
                 FaceUrl='https://www.facebook.com/aledesmadev/'
                 InUrl='https://www.linkedin.com/in/afledesma/'
                 Photo='https://scontent.fbog2-3.fna.fbcdn.net/v/t1.0-9/33516574_445271872580085_3127037534983421952_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_eui2=AeGRZY0cNwDsXgtB7lSo_FqcolcJCI2ICFmiVwkIjYgIWW4KOekpR5_x_qbSeewZric&_nc_ohc=BPJsrpbE-aMAX8zeU7e&_nc_ht=scontent.fbog2-3.fna&oh=72f878f9bac672e042050a546910274d&oe=5EF5932B'
-            />
+                />
         </div>
-        <div className='container odd'>
-            <GetInTouch phone='3164976830' email='aaaa@eee.com' />
+        <div className="container odd">
+            <h3 className="title-services">Services</h3>
+            <p className="subtitle-services">What we do?</p>
+            <Service iconService={iconIdea} title="Frontend" description="orem lorem lorem"/>
+            <Service iconService={iconInnovation} title="React" description="orem lorem lorem"/>
+            <Service iconService={iconCreativity} title="Webpack" description="orem lorem lorem"/>
+        </div>
+        <div className='container'>
+            <GetInTouch phone='3164976830' email='aledesmadev@gmail.com' greet="Hello!!" />
         </div>
     </div>
 );

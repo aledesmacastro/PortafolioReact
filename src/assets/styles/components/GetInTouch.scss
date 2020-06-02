@@ -6,8 +6,6 @@
 .getInTouch {
     margin: 0 auto;
     width: auto;
-    max-width: 164px;
-
     &__title {
         font-size: szrem(24);
         @include text(center);
