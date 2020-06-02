@@ -37,6 +37,10 @@ const App = () => (
         <div className='container'>
             <GetInTouch phone='3164976830' email='aledesmadev@gmail.com' greet="Hello!!" />
         </div>
+        <div className="container">
+            <hr/>
+            <p className="copyright">Copyright @aledesmadev - 2020</p>
+        </div>
     </div>
 );
 

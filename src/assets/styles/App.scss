@@ -16,6 +16,10 @@ h1 {
     font-size: 34px;
 }
 
+hr {
+    border: .5px inset darken($color: $ColorContrast, $amount: 40);
+}
+
 .title-services {
     color: $ColorContrast;
     text-align: center;
@@ -23,4 +27,9 @@ h1 {
 .subtitle-services {
     text-align: center;
     font-size: szrem(36);
+}
+.copyright {
+    text-align: center;
+    font-size: szrem(11);
+    color: darken($color: #ffffff, $amount: 45);
 }
