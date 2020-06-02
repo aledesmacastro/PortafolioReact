@@ -6,13 +6,7 @@
 .getInTouch {
     margin: 0 auto;
     width: auto;
-    &__title {
-        font-size: szrem(24);
-        @include text(center);
-        margin-bottom: 10px;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-    }
+
     &__container {
         display: flex;
         align-items: center;

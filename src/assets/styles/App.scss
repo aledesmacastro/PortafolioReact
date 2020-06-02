@@ -20,13 +20,15 @@ hr {
     border: .5px inset darken($color: $ColorContrast, $amount: 40);
 }
 
-.title-services {
+.title-section {
     color: $ColorContrast;
     text-align: center;
 }
-.subtitle-services {
-    text-align: center;
-    font-size: szrem(36);
+.subtitle-section {
+    @include text(center);
+    @include font(szrem(24), bold);
+    letter-spacing: 0.5px;
+    margin: 10px 0;
 }
 .copyright {
     text-align: center;

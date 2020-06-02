@@ -12,12 +12,15 @@ import Service from "../components/Service";
 import iconIdea from "../assets/statics/idea.svg";
 import iconCreativity from "../assets/statics/creativity.svg";
 import iconInnovation from "../assets/statics/innovation.svg";
+import iconPhone from '../assets/statics/incoming-call.svg';
+import iconMail from '../assets/statics/email.svg';
+import iconWhatsapp from '../assets/statics/whatsapp.svg';
 
 const App = () => (
     <div className='App'>
         <div className='container'>
             <Header />
-            <hr/>
+            <hr />
             <MainInfo
                 Name='Anibal'
                 LastName='Ledesma'
@@ -25,21 +28,51 @@ const App = () => (
                 FaceUrl='https://www.facebook.com/aledesmadev/'
                 InUrl='https://www.linkedin.com/in/afledesma/'
                 Photo='https://scontent.fbog2-3.fna.fbcdn.net/v/t1.0-9/33516574_445271872580085_3127037534983421952_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_eui2=AeGRZY0cNwDsXgtB7lSo_FqcolcJCI2ICFmiVwkIjYgIWW4KOekpR5_x_qbSeewZric&_nc_ohc=BPJsrpbE-aMAX8zeU7e&_nc_ht=scontent.fbog2-3.fna&oh=72f878f9bac672e042050a546910274d&oe=5EF5932B'
-                />
+            />
         </div>
-        <div className="container odd">
-            <h3 className="title-services">Services</h3>
-            <p className="subtitle-services">What we do?</p>
-            <Service iconService={iconIdea} title="Frontend" description="orem lorem lorem"/>
-            <Service iconService={iconInnovation} title="React" description="orem lorem lorem"/>
-            <Service iconService={iconCreativity} title="Webpack" description="orem lorem lorem"/>
+        <div className='container odd'>
+            <h3 className='title-section'>Services</h3>
+            <p className='subtitle-section'>What we do?</p>
+            <Service
+                iconService={iconIdea}
+                title='Frontend'
+                description='orem lorem lorem'
+            />
+            <Service
+                iconService={iconInnovation}
+                title='React'
+                description='orem lorem lorem'
+            />
+            <Service
+                iconService={iconCreativity}
+                title='Webpack'
+                description='orem lorem lorem'
+            />
         </div>
         <div className='container'>
-            <GetInTouch phone='3164976830' email='aledesmadev@gmail.com' greet="Hello!!" />
+            <h3 className="subtitle-section">Get In Touch</h3>
+            <GetInTouch
+                iconContact={iconPhone}
+                message='Call me now'
+                link='tel:+573164976830'
+                data='3164976830'
+            />
+            <GetInTouch
+                iconContact={iconMail}
+                message='Send me mail'
+                link='mailto:aledesmadev@gmail.com'
+                data='aledesmadev@gmail.com'
+            />
+            <GetInTouch
+                iconContact={iconWhatsapp}
+                message='Send a message'
+                link='https://api.whatsapp.com/send?phone=57${phone}&text=Hello!!`} target="_blank">Hello!!'
+                data='Hello'
+            />
         </div>
-        <div className="container">
-            <hr/>
-            <p className="copyright">Copyright @aledesmadev - 2020</p>
+        <div className='container'>
+            <hr />
+            <p className='copyright'>Copyright @aledesmadev - 2020</p>
         </div>
     </div>
 );

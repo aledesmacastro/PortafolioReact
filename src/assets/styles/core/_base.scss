@@ -56,8 +56,8 @@
 //Font
 @mixin font(
     $size: 1em,
-    $family: $font1,
     $weight: normal,
+    $family: $SecondFont,
     $style: normal,
     $line-height: "none",
     $variant: normal
