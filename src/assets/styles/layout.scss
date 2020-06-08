@@ -4,13 +4,16 @@
 @import './core/mixin';
 
 .container {
-    width: 320px;
-    display: block;
-    position: relative;
-    margin: 0 auto;
+    max-width: 100vw;
     overflow: hidden;
-    padding: 15px 25px;
-    box-sizing: border-box;
+    &__fluid {
+        width: 320px;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        padding: 15px 25px;
+        box-sizing: border-box;
+    }
 }
 div[class~='odd'] {
     background-color: darken($color: $ColorPrincipal, $amount: 2);
