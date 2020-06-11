@@ -15,6 +15,23 @@
         box-sizing: border-box;
     }
 }
-div[class~='odd'] {
+section[class~='odd'] {
     background-color: darken($color: $ColorPrincipal, $amount: 2);
+}
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.flex-justify-stretch {
+    justify-content: space-around;
+}
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+.grid {
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid;
 }

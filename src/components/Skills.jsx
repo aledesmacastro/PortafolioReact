@@ -2,28 +2,30 @@ import React, { Component } from "react";
 import "../assets/styles/components/Skills.scss";
 
 class Skills extends Component {
+
     render() {
-        const { skill, percent } = this.props;
+        const { skill, percent} = this.props;
+
         return (
             <div className='skill'>
-                <div className='row'>
-                    <div className='skill__name'>
+                <div className='skill__row'>
+                    <h3 className='skill__name'>
                         {skill != undefined && skill.trim().length > 0 ? (
-                            <p>{skill}</p>
+                            skill
                         ) : (
-                            <p>Put a name to skill</p>
+                            <span>Put a name to skill</span>
                         )}
-                    </div>
-                    <div className='skill__value'>
+                    </h3>
+                    <p className='skill__value'>
                         {percent != undefined && percent.trim().length > 0 ? (
-                            <p>{percent}%</p>
+                            <span>{percent}%</span>
                         ) : (
-                            <p>Put percent</p>
+                            <span>Put percent</span>
                         )}
-                    </div>
+                    </p>
                 </div>
-                <div className='row'>
-                    <div className='skill__progressive-bar'></div>
+                <div className='skill__row'>
+                    <progress id="skill__progress" max="100" value={percent} className='skill__progressive-bar'></progress>
                 </div>
             </div>
         );

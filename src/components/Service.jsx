@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../assets/styles/components/Service.scss";
 import Icon from "./Icon";
 
-
 class Service extends Component {
     render() {
         const {iconService, title, description} = this.props;

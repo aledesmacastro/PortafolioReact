@@ -2,3 +2,34 @@
 @import '../core/media';
 @import '../core/base';
 @import '../core/mixin';
+
+.skill {
+    margin: 0 0 20px;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name {
+        @include font(inherit,normal,$FirstFont);
+        letter-spacing: .8px;
+    }
+    &__value{
+        letter-spacing: .5px;
+    }
+    progress[value],
+    progress::-webkit-progress-value {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: $ColorContrast;
+    }
+    &__progressive-bar {
+        margin-top: 3px;
+        display: block;
+        width: 100%;
+        height: 5px;
+    }
+    &:last-child {
+        margin: 0;
+    }
+}
