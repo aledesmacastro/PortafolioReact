@@ -9,7 +9,7 @@ const AGILITY_RPA_ICON =
 
 export const skills: SkillCategory[] = [
   {
-    category: 'Frontend',
+    category: { es: 'Frontend', en: 'Frontend' },
     items: [
       { name: 'HTML',        icon: devicon('html5',      'html5-original') },
       { name: 'CSS',         icon: devicon('css3',       'css3-original') },
@@ -20,13 +20,13 @@ export const skills: SkillCategory[] = [
     ],
   },
   {
-    category: 'Backend',
+    category: { es: 'Backend', en: 'Backend' },
     items: [
       { name: 'PHP', icon: devicon('php', 'php-original') },
     ],
   },
   {
-    category: 'Herramientas',
+    category: { es: 'Herramientas', en: 'Tools' },
     items: [
       { name: 'Git & GitHub', icon: devicon('git',       'git-original') },
       { name: 'WordPress',    icon: devicon('wordpress', 'wordpress-plain') },

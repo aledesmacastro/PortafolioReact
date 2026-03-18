@@ -3,6 +3,7 @@ import SectionTitle from '../../ui/SectionTitle/SectionTitle'
 import FadeIn from '../../ui/FadeIn/FadeIn'
 import BlogCard from './BlogCard'
 import type { BlogPost } from '../../../types'
+import { useLang } from '../../../context/LangContext'
 import styles from './Blog.module.scss'
 
 const MOCK_POSTS: BlogPost[] = [
@@ -47,6 +48,7 @@ const MOCK_POSTS: BlogPost[] = [
 const Blog: React.FC = () => {
   const [posts, setPosts] = useState<BlogPost[]>([])
   const [loading, setLoading] = useState(true)
+  const { t, lang } = useLang()
 
   useEffect(() => {
     // TODO: reemplazar con fetch real cuando tengas cuenta Dev.to
@@ -64,14 +66,14 @@ const Blog: React.FC = () => {
   return (
     <section id="blog" className={styles.blog}>
       <FadeIn>
-        <SectionTitle title="Blog" subtitle="Thoughts & articles" />
+        <SectionTitle title={t.blog.title} subtitle={t.blog.subtitle} />
       </FadeIn>
       {loading ? (
-        <div className={styles.loading} aria-live="polite">Loading posts...</div>
+        <div className={styles.loading} aria-live="polite">{t.blog.loading}</div>
       ) : (
         <div className={styles.grid}>
           {posts.map((post, i) => (
-            <BlogCard key={post.id} post={post} index={i} />
+            <BlogCard key={post.id} post={post} index={i} lang={lang} minReadLabel={t.blog.minRead} />
           ))}
         </div>
       )}
