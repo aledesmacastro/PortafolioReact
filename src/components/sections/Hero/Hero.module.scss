@@ -106,9 +106,11 @@
     width: min(380px, 100%);
     aspect-ratio: 1;
     object-fit: cover;
+    object-position: center 10%; 
     border-radius: var(--radius-full);
     border: 3px solid var(--color-accent);
     box-shadow: var(--shadow-accent), var(--shadow-lg);
+    filter: brightness(1) contrast(1.10) saturate(0.65);
   }
 
   @include below($bp-desktop) {
