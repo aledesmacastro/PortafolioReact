@@ -1,0 +1,54 @@
+@use '../../../styles/mixins' as *;
+
+.services {
+  @include container;
+  background: var(--color-surface);
+  max-width: 100%;
+  padding-inline: 0;
+
+  > * {
+    @include container;
+  }
+}
+
+.grid {
+  @include container;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-xl);
+}
+
+.card {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,212,212,.08);
+  border-radius: var(--radius-md);
+  color: var(--color-accent);
+
+  svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+  }
+}
+
+.title {
+  @include heading;
+  font-size: var(--text-xl);
+}
+
+.description {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
