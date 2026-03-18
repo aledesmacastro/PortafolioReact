@@ -1,0 +1,25 @@
+@use '../../../styles/mixins' as *;
+
+.about {
+  @include container;
+}
+
+.content {
+  max-width: 640px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+
+  p {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    line-height: 1.8;
+  }
+}
+
+.actions {
+  margin-top: var(--space-md);
+}

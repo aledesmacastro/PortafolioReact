@@ -1,0 +1,66 @@
+@use '../../../styles/mixins' as *;
+
+.projects {
+  @include container;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+}
+
+.card {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  overflow: hidden;
+}
+
+.cardImage {
+  margin: calc(var(--space-xl) * -1) calc(var(--space-xl) * -1) 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+  }
+
+  .card:hover & img {
+    transform: scale(1.04);
+  }
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  flex: 1;
+}
+
+.cardTitle {
+  @include heading;
+  font-size: var(--text-xl);
+}
+
+.cardDescription {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.cardTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.cardActions {
+  display: flex;
+  gap: var(--space-sm);
+  padding-top: var(--space-xs);
+}
