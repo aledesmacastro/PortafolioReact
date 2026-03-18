@@ -11,9 +11,11 @@ const Experience: React.FC = () => {
 
   return (
     <section id="experience" className={styles.experience}>
-      <FadeIn>
-        <SectionTitle title={t.experience.title} subtitle={t.experience.subtitle} />
-      </FadeIn>
+      <div className={styles.header}>
+        <FadeIn>
+          <SectionTitle title={t.experience.title} subtitle={t.experience.subtitle} />
+        </FadeIn>
+      </div>
       <div className={styles.timeline}>
         {experience.map(({ id, company, role, period, description }, i) => (
           <motion.div
