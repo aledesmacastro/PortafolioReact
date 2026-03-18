@@ -9,12 +9,13 @@ const About: React.FC = () => (
     <FadeIn>
       <SectionTitle title="About Me" subtitle="Who am I?" />
       <div className={styles.content}>
-        <div className={styles.text}>
-          <p>
-            Desarrollador Front End con experiencia en la creación de interfaces
-            modernas, accesibles y responsivas. Hábil para trabajar en ambientes
-            desafiantes y competitivos.
-          </p>
+<div className={styles.text}>
+            <p>
+            Desarrollador Front End especializado en arquitectura de interfaces
+            modernas, accesibles y de alto rendimiento. Combiné experiencia técnica
+            con capacidad para resolver problemas complejos en entornos dinámicos,
+            siempre enfocado en la experiencia del usuario.
+            </p>
           <p>
             Persona responsable y adaptable, con rápida absorción de nuevas
             tecnologías. Apasionado por el trabajo en equipo y la mejora continua.

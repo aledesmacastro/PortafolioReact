@@ -2,52 +2,78 @@
 
 .skills {
   @include container;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
 }
 
-.list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-xl) var(--space-3xl);
+// ─── Grupo por categoría ──────────────────────────────────────────────────────
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
 
-  @include below($bp-tablet) {
-    grid-template-columns: 1fr;
+.groupTitle {
+  @include heading;
+  @include accent-line;
+  display: inline-block;
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+
+// ─── Grid de cards ────────────────────────────────────────────────────────────
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+// ─── Card individual ──────────────────────────────────────────────────────────
+.card {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  width: 100px;
+  cursor: default;
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-accent);
+  }
+
+  @include mobile {
+    width: 88px;
+    padding: var(--space-md);
   }
 }
 
-.item {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-}
+.icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include mobile {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .name {
-  font-size: var(--text-sm);
-  font-weight: 600;
-  color: var(--color-text);
-}
-
-.percent {
+  font-family: var(--font-body);
   font-size: var(--text-xs);
-  font-weight: 600;
-  color: var(--color-accent);
-}
-
-.bar {
-  height: 4px;
-  background: var(--color-border);
-  border-radius: var(--radius-full);
-  overflow: hidden;
-}
-
-.fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--color-accent), rgba(0,212,212,.5));
-  border-radius: var(--radius-full);
-  transition: width 1s ease;
+  color: var(--color-text-muted);
+  text-align: center;
+  line-height: 1.2;
 }

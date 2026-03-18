@@ -1,7 +1,11 @@
 // ─── Skill ────────────────────────────────────────────────────────────────────
-export interface Skill {
+export interface SkillItem {
   name: string
-  percent: number
+  icon: string    // URL completa del icono
+}
+export interface SkillCategory {
+  category: string
+  items: SkillItem[]
 }
 
 // ─── Service ──────────────────────────────────────────────────────────────────
