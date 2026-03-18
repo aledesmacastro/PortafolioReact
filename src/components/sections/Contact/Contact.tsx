@@ -5,6 +5,8 @@ import FadeIn from '../../ui/FadeIn/FadeIn'
 import { useLang } from '../../../context/LangContext'
 import styles from './Contact.module.scss'
 
+const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY as string
+
 interface FormState {
   name: string
   email: string
@@ -26,12 +28,28 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('sending')
-    // TODO: integrar EmailJS en producción
-    // await emailjs.send(SERVICE_ID, TEMPLATE_ID, form, PUBLIC_KEY)
-    setTimeout(() => {
-      setStatus('sent')
-      setForm(initialState)
-    }, 1000)
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setStatus('sent')
+        setForm(initialState)
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -47,6 +65,9 @@ const Contact: React.FC = () => {
             </p>
           </div>
           <form className={styles.form} onSubmit={handleSubmit} noValidate>
+            {/* Honeypot anti-spam */}
+            <input type="checkbox" name="botcheck" style={{ display: 'none' }} />
+
             <div className={styles.formGroup}>
               <label htmlFor="name" className={styles.label}>{t.contact.labelName}</label>
               <input id="name" name="name" type="text" className={styles.input}

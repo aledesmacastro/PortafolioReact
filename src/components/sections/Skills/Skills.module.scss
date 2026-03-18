@@ -28,6 +28,7 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: left;
   gap: var(--space-md);
 }
 
@@ -76,4 +77,8 @@
   color: var(--color-text-muted);
   text-align: center;
   line-height: 1.2;
+  min-height: calc(var(--text-xs) * 1.2 * 2); // reserva espacio para 2 líneas
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

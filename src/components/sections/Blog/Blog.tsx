@@ -65,9 +65,11 @@ const Blog: React.FC = () => {
 
   return (
     <section id="blog" className={styles.blog}>
-      <FadeIn>
-        <SectionTitle title={t.blog.title} subtitle={t.blog.subtitle} />
-      </FadeIn>
+      <div className={styles.header}>
+        <FadeIn>
+          <SectionTitle title={t.blog.title} subtitle={t.blog.subtitle} />
+        </FadeIn>
+      </div>
       {loading ? (
         <div className={styles.loading} aria-live="polite">{t.blog.loading}</div>
       ) : (

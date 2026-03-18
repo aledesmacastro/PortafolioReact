@@ -1,10 +1,11 @@
 @use '../../../styles/mixins' as *;
 
 .experience {
-  @include container;
   background: var(--color-surface);
-  max-width: 100%;
-  padding-inline: 0;
+}
+
+.header {
+  @include container;
 }
 
 .timeline {
