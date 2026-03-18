@@ -1,6 +1,6 @@
-# Portfolio Personal — Anibal Ledesma
+# Portafolio Personal — Anibal Ledesma
 
-SPA de portfolio profesional construida con React 18, Vite y TypeScript. Diseño dark + cyan con tema de alto contraste, soporte ES/EN y animaciones via Framer Motion. Desplegada en GitHub Pages.
+SPA de portafolio profesional construida con React 18, Vite y TypeScript. Diseño dark + cyan con tema de alto contraste, soporte ES/EN y animaciones via Framer Motion. Desplegada en GitHub Pages.
 
 **Live:** [aledesmacastro.github.io/PortafolioReact](https://aledesmacastro.github.io/PortafolioReact/)
 
@@ -39,8 +39,6 @@ Crea un archivo `.env` en la raíz (no se sube al repo):
 ```env
 VITE_WEB3FORMS_KEY=tu_api_key_de_web3forms
 ```
-
-Obtén tu key gratuita en [web3forms.com](https://web3forms.com).
 
 ---
 
