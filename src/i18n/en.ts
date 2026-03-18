@@ -12,7 +12,6 @@ const en = {
     occupation: 'Front-End Developer & RPA Engineer',
     description:
       'Front-End Developer and project leader with more than 10 years of experience building web interfaces and automating processes. Passionate about creating efficient, accessible, user-centered digital solutions.',
-    hireMe:  'Hire me',
     aboutMe: 'About me',
   },
   about: {

@@ -50,7 +50,6 @@ const Hero: React.FC<HeroProps> = ({ name, lastName, photo, faceUrl, inUrl }) =>
           {t.hero.description}
         </motion.p>
         <motion.div className={styles.actions} variants={itemVariants}>
-          <Button variant="primary" as="a" href="#contact">{t.hero.hireMe}</Button>
           <Button variant="outline" as="a" href="#about">{t.hero.aboutMe}</Button>
         </motion.div>
         <motion.ul className={styles.socials} variants={itemVariants}>

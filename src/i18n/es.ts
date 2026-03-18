@@ -12,7 +12,6 @@ const es = {
     occupation: 'Desarrollador Front-End & Ingeniero RPA',
     description:
       'Desarrollador Front-End y líder de proyectos con más de 10 años de experiencia en interfaces web y automatización de procesos. Apasionado por construir soluciones digitales eficientes, accesibles y centradas en el usuario.',
-    hireMe:  'Contrátame',
     aboutMe: 'Sobre mí',
   },
   about: {
