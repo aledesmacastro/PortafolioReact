@@ -1,10 +1,15 @@
+// ─── i18n ─────────────────────────────────────────────────────────────────────
+export type Lang = 'es' | 'en'
+export type Theme = 'dark' | 'high-contrast'
+export interface LocalizedString { es: string; en: string }
+
 // ─── Skill ────────────────────────────────────────────────────────────────────
 export interface SkillItem {
   name: string
   icon: string    // URL completa del icono
 }
 export interface SkillCategory {
-  category: string
+  category: LocalizedString
   items: SkillItem[]
 }
 
@@ -12,25 +17,25 @@ export interface SkillCategory {
 export interface Service {
   id: number
   iconName: string   // nombre del SVG en src/assets/icons/
-  title: string
-  description: string
+  title: LocalizedString
+  description: LocalizedString
 }
 
 // ─── Experience ───────────────────────────────────────────────────────────────
 export interface Experience {
   id: number
   company: string
-  role: string
+  role: LocalizedString
   period: string
-  description: string
+  description: LocalizedString
   logoUrl?: string
 }
 
 // ─── Project ──────────────────────────────────────────────────────────────────
 export interface Project {
   id: number
-  title: string
-  description: string
+  title: LocalizedString
+  description: LocalizedString
   tags: string[]
   repoUrl?: string
   liveUrl?: string

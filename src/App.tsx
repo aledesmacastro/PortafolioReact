@@ -4,6 +4,10 @@ import profilePhoto from './assets/images/profile.jpg'
 // Global styles
 import './styles/global.scss'
 
+// Providers
+import { ThemeProvider } from './context/ThemeContext'
+import { LangProvider } from './context/LangContext'
+
 // Layout
 import Header from './components/layout/Header/Header'
 import Footer from './components/layout/Footer/Footer'
@@ -19,28 +23,28 @@ import Blog from './components/sections/Blog/Blog'
 import Contact from './components/sections/Contact/Contact'
 
 const App: React.FC = () => (
-  <>
-    <Header />
-    <main>
-      <Hero
-        name="Anibal"
-        lastName="Ledesma"
-        occupation="Front End Developer"
-        description="Hábil para trabajar en ambientes desafiantes y competitivos. Persona responsable y adaptable, rápida absorción de las nuevas tecnologías. Asociación y trabajo en equipo."
-        photo={profilePhoto}
-        faceUrl="https://www.facebook.com/aledesmadev/"
-        inUrl="https://www.linkedin.com/in/afledesma/"
-      />
-      <About />
-      <Services />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Blog />
-      <Contact />
-    </main>
-    <Footer />
-  </>
+  <ThemeProvider>
+    <LangProvider>
+      <Header />
+      <main>
+        <Hero
+          name="Anibal"
+          lastName="Ledesma Castro"
+          photo={profilePhoto}
+          faceUrl="https://www.facebook.com/aledesmadev/"
+          inUrl="https://www.linkedin.com/in/afledesma/"
+        />
+        <About />
+        <Services />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Blog />
+        <Contact />
+      </main>
+      <Footer />
+    </LangProvider>
+  </ThemeProvider>
 )
 
 export default App

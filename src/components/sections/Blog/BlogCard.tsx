@@ -1,16 +1,19 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Tag from '../../ui/Tag/Tag'
-import type { BlogPost } from '../../../types'
+import type { BlogPost, Lang } from '../../../types'
 import styles from './Blog.module.scss'
 
 interface BlogCardProps {
   post: BlogPost
   index: number
+  lang: Lang
+  minReadLabel: string
 }
 
-const BlogCard: React.FC<BlogCardProps> = ({ post, index }) => {
-  const date = new Date(post.published_at).toLocaleDateString('es-CO', {
+const BlogCard: React.FC<BlogCardProps> = ({ post, index, lang, minReadLabel }) => {
+  const locale = lang === 'es' ? 'es-CO' : 'en-US'
+  const date = new Date(post.published_at).toLocaleDateString(locale, {
     year: 'numeric', month: 'long', day: 'numeric',
   })
 
@@ -40,7 +43,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, index }) => {
         <p className={styles.cardDescription}>{post.description}</p>
         <div className={styles.cardMeta}>
           <span>{date}</span>
-          <span>{post.reading_time_minutes} min read</span>
+          <span>{post.reading_time_minutes} {minReadLabel}</span>
         </div>
       </div>
     </motion.article>

@@ -2,15 +2,16 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Tag from '../../ui/Tag/Tag'
 import Button from '../../ui/Button/Button'
-import type { Project } from '../../../types'
+import type { Project, Lang } from '../../../types'
 import styles from './Projects.module.scss'
 
 interface ProjectCardProps {
   project: Project
   index: number
+  lang: Lang
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, lang }) => {
   const { title, description, tags, repoUrl, liveUrl, image } = project
 
   return (
@@ -24,12 +25,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     >
       {image && (
         <div className={styles.cardImage}>
-          <img src={image} alt={title} loading="lazy" />
+          <img src={image} alt={title[lang]} loading="lazy" />
         </div>
       )}
       <div className={styles.cardBody}>
-        <h3 className={styles.cardTitle}>{title}</h3>
-        <p className={styles.cardDescription}>{description}</p>
+        <h3 className={styles.cardTitle}>{title[lang]}</h3>
+        <p className={styles.cardDescription}>{description[lang]}</p>
         <ul className={styles.cardTags}>
           {tags.map((tag) => (
             <li key={tag}><Tag label={tag} /></li>

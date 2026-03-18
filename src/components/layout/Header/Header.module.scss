@@ -7,7 +7,7 @@
   right: 0;
   z-index: 100;
   height: var(--header-height);
-  background: rgba(13, 14, 26, 0.85);
+  background: var(--color-header-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
@@ -32,6 +32,12 @@
   font-weight: 700;
   color: var(--color-accent);
   letter-spacing: 0.05em;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
 }
 
 .nav {
